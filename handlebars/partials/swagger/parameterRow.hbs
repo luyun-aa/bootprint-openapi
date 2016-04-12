@@ -1,7 +1,7 @@
 {{!--
     Display a single parameter in a table row.
     @param {Parameter} parameter a parameter object
-    @param {string=} key a reference key (if present, this is display in an additional 
+    @param {string=} key a reference key (if present, this is display in an additional
         column in front of the other columns
     @param {string=} $ref the reference path of the parameter, in case it is a reference to a default parameter
     @api public
@@ -17,7 +17,7 @@
     <td>
         {{~>json-schema/datatype parameter ~}}
         {{~#if parameter.collectionFormat ~}}
-            <span class="sw-param-collection-format">, 
+            <span class="sw-param-collection-format">,
                 {{md (swagger--collection-format parameter.collectionFormat parameter.name) stripParagraph=true}}
             </span>
         {{~/if}}
@@ -25,9 +25,6 @@
     <td>
         {{#if parameter.required}}
             <span class="json-property-required"></span>
-        {{/if}}
-        {{#if $ref}}
-            <span class="swagger--global"></span> <span class="json-schema--reference"><a href="{{$ref}}">{{$ref}}</a></span>
         {{/if}}
     </td>
 </tr>
