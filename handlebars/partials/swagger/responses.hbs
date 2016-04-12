@@ -10,7 +10,7 @@
         {{#if produces}}
             <p>{{>swagger/list-of-labels values=produces}}</p>
         {{else if @root.produces}}
-            <p><a href="#sw-default-produces">Uses default content-types: </a>
+            <p><a href="#sw-default-produces"></a>
                 {{>swagger/list-of-labels values=@root.produces}}
             </p>
         {{/if}}
@@ -23,7 +23,7 @@
                     {{#if $ref}}
                         <span class="swagger--global"></span> <span class="json-schema--reference"><a href="{{$ref}}">{{$ref}}</a></span>
                     {{/if}}
-                
+
                 </dt>
                 <dd class="sw-response-{{@key}}">
                     {{#if $ref}}
