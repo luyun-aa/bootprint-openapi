@@ -25,6 +25,10 @@
     {{#each schemes}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
 </div>
 
+<div id="sw-basepath" class="sw-default-value">
+    <span class="sw-default-value-header">Base path:</span> {{basePath}}
+</div>
+
 {{#if showTagSummary}}
     {{>swagger/tags}}
 {{else}}
@@ -40,4 +44,3 @@
 {{>swagger/responseDefinitions responses=responses}}
 
 {{>swagger/definitions definitions=definitions}}
-

@@ -3,11 +3,13 @@
     @param {Definition[]} definitions a list of JSON-subschemas.
     @api public
 --}}
-                   
+
 {{#if definitions}}
+<div style="display:none">
     <h2>Schema definitions</h2>
 
     {{#eachSorted definitions}}
         {{>swagger/model model=. title=@key anchor="/definitions" }}
     {{/eachSorted}}
-{{/if}}    
+</div>
+{{/if}}
