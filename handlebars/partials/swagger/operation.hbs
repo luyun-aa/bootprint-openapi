@@ -24,8 +24,9 @@
         {{#if _show_requst_body_section}}
             {{>swagger/request-body consumes=operation.consumes body=_request_body}}
         {{/if}}
-        {{>swagger/parameters parameters=pathParameters in="path"}}
-        {{>swagger/parameters parameters=parameters in="request"}}
+        {{#each params}}
+          {{>swagger/parameters parameters=. in=@key}}
+        {{/each}}
         {{>swagger/responses}}
         {{>swagger/security}}
     </div>
